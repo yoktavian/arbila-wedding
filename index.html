@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Della+Respira&family=Ovo&display=swap" rel="stylesheet">
+  <style>
+    .bg-responsive {
+      background-image: url('assets/bible-bg.png');
+      padding: 98px;
+    }
+    @media (min-width: 768px) { /* sm */
+      .bg-responsive {
+        background-image: url('assets/bible-bg-2x.png');
+        padding: 220px;
+      }
+    }
+    @font-face {
+        font-family: 'TAN Mon Cheri';
+        src: url('./assets/fonts/tan-mon-cheri.woff2') format('woff2'),
+            url('./assets/fonts/tan-mon-cheri.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Hagrid regular';
+        src: url('./assets/fonts/hagrid-regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Flatory sans';
+        src: url('./assets/fonts/flatory-sans.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Georgia pro';
+        src: url('./assets/fonts/georgia-pro.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Georgia pro';
+        src: url('./assets/fonts/georgia-pro-italic.ttf') format('truetype');
+        font-weight: normal;
+        font-style: italic;
+    }
+    @font-face {
+        font-family: 'ITC edwerian';
+        src: url('./assets/fonts/itc-edwerian.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .spinner {
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+  </style>
+</head>
+<body class="flex items-center justify-center w-screen overflow-x-hidden scroll-smooth" style="font-family: 'Atkinson Hyperlegible', sans-serif;">
+  <div class="flex flex-col items-center justify-center max-w-[768px]">
+    <!-- Page 1 -->
+    <section id="page1" class="flex flex-col h-screen w-full flex items-center justify-center bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/onboarding-bg.png');">
+        <img src="./assets/couple-logo.png" class="w-full"/>
+        <div class="text-center text-[#397362] bg-opacity-50 p-8 rounded">
+        <p class="text-base lg:text-[28px]">UNDANGAN AKAD & TASYAKURAN PERNIKAHAN</p>
+        <p class="text-[32px] lg:text-[93px]" style="font-family: 'Della Respira', serif;">Arbianti & Lasak</p>
+        <p class="text-base lg:text-[28px] mb-4">MINGGU, 13 april 2025</p>
+        </div>
+    </section>
+
+    <!-- Page 2 -->
+    <section id="page2" class="h-screen w-full flex items-center bg-[#e18891]">
+        <div class="flex flex-col bg-custom bg-center bg-no-repeat bg-responsive w-full h-full text-center items-center justify-center text-[#0f5f53]" style="font-family: 'Della Respira', serif;">
+            <p>"Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."</p>
+            <p class="mt-4">(QS. Ar-Rum: 21)</p>
+        </div>
+    </section>
+
+    <!-- Page 3 -->
+    <section id="page3" class="h-screen w-full flex items-center bg-[#397362] bg-cover bg-center bg-no-repeat pt-[30vh]" style="background-image: url('./assets/couple-info-bg.png');">
+        <div class="flex flex-col h-full w-full bg-[#fdf8da] rounded-t-[220px] md:rounded-t-[360px] text-center p-[32px] items-center">
+            <img src="./assets/invited-icon.svg" class="w-[92px] h-[92px]"/>
+            <p class="mt-8 text-2xl lg:text-[32px]" style="font-family: 'TAN Mon Cheri', serif;">ARBIANTI ASHARI</p>
+            <p class="text-[#3b3838]" style="font-family: 'Ovo', serif;">PUTRI KEDUA DARI AHMAD MULADI & SYLVIA SANTOSA</p>
+            <p class="text-3xl lg:text-[52px] my-6" style="font-family: 'Ovo', serif;">&</p>
+            <p class="text-2xl lg:text-[32px]" style="font-family: 'TAN Mon Cheri', serif;">LASAK SHABA DIRGANTARA</p>
+            <p class="text-[#3b3838]" style="font-family: 'Ovo', serif;">PUTRA PERTAMA DARI DJAROT SUPRAJITNO & UMI KULSUM RODHIYAH</p>
+        </div>
+    </section>
+
+    <!-- Page 4 -->
+    <section id="page3" class="h-screen w-full flex items-center">
+        <div class="flex h-full w-full text-white">
+            <div class="flex flex-1 flex-col">
+                <div class="relative flex-1 w-full flex flex-col py-8 px-4 bg-[#e18891]">
+                    <p style="font-family: 'Ovo', serif;">THE INTIMATE WEDDING OF</p>
+                    <p class="text-4xl lg:text-[93px] sm:text-5xl mt-2" style="font-family: 'Hagrid regular', serif;">ARBIANTI</p>
+                    <p class="text-4xl lg:text-[93px] sm:text-5xl mt-2" style="font-family: 'Hagrid regular', serif;">&</p>
+                    <p class="text-4xl lg:text-[93px] sm:text-5xl mt-2" style="font-family: 'Hagrid regular', serif;">LASAK</p>
+                    <div class="absolute bottom-0 left-0 bg-[#121212] w-full h-[80px]">
+                        <div class="bg-fit bg-center bg-repeat h-full w-full" style="background-image: url('./assets/design-pattern-1.png');">
+                        </div>
+                    </div>
+                </div>
+                <div class="relative flex flex-col flex-1 bg-[#121212]">
+                    <p class="sm:text-lg lg:text-[32px] ml-4 mt-8" style="font-family: 'TAN Mon Cheri', serif;">MINGGU, 13 APRIL 2025</p>
+                    <div class="flex flex-col p-4 mt-4">
+                        <div class="flex gap-2 text-base lg:text-[20px]">
+                            <span class="w-[105px] lg:w-[140px]" style="font-family: 'Ovo', serif;">AKAD NIKAH</span>
+                            <span style="font-family: 'Ovo', serif;">:</span>
+                            <span style="font-family: 'Ovo', serif;">08.00-09.00</span>
+                        </div>
+                        <div class="flex gap-2 text-base lg:text-[20px]">
+                            <span class="w-[105px] lg:w-[140px]" style="font-family: 'Ovo', serif;">TASYAKURAN</span>
+                            <span style="font-family: 'Ovo', serif;">:</span>
+                            <span style="font-family: 'Ovo', serif;">09.00-11.00</span>
+                        </div>
+                    </div>
+                    <p class="sm:text-lg lg:text-[32px] ml-4 mt-4" style="font-family: 'TAN Mon Cheri', serif;">TJENDANA BISTRO</p>
+                    <p class="text-sm lg:text-[20px] ml-4 mt-4" style="font-family: 'Ovo', serif;">DRESS CODE : BATIK</p>
+
+                    <div class="absolute bottom-0 left-0 right-0 bg-[#121212] w-full h-[40px]">
+                        <!-- using different design because the image is not visible to use in different screen size -->
+                        <div class="bg-fit bg-top h-full" style="background-image: url('./assets/design-pattern-2.svg');">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col w-[90px]">
+                <div class="bg-fit bg-repeat flex-1 w-[90px]" style="background-image: url('./assets/design-pattern-3.svg');">
+                </div>
+                <div class="bg-fit bg-repeat h-[160px] w-[90px]" style="background-image: url('./assets/design-pattern-4.svg');">
+                </div>
+                <div class="bg-fit bg-repeat flex-1 w-[90px]" style="background-image: url('./assets/design-pattern-5.svg');">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 5 -->
+    <section id="page5" class="h-screen w-full flex items-center justify-center bg-white">
+        <div class="relative flex flex-col h-full w-full items-center text-center text-[#397362]">
+            <img src="./assets/top-left-loc-header.svg" class="absolute top-0 left-0"/>
+            <img src="./assets/top-right-loc-header.svg" class="absolute top-0 right-0"/>
+            <img src="./assets/bottom-left-loc-header.svg" class="absolute bottom-0 left-0"/>
+            <img src="./assets/bottom-right-loc-header.svg" class="absolute bottom-0 right-0"/>
+
+            <img src="./assets/qrcode-loc.svg" class="w-[300px] lg:w-[500px] h-[300px] lg:h-[500px] mt-[100px]"/>
+            <div class="flex flex-col p-6">
+                <p class="mt-6 text-3xl lg:text-[52px] font-bold" style="font-family: 'Hagrid regular', serif;">SCAN HERE</p>
+                <p class="mt-6 lg:text-[24px]" style="font-family: 'Della Respira', serif;">TJENDANA BISTRO</p>
+                <p class="lg:text-[24px]" style="font-family: 'Della Respira', serif;">Jl. Sukajadi No.181, Cipedes, Kec. Sukajadi, Kota Bandung, Jawa Barat 40162</p>
+                <p class="text-sm lg:text-xl mt-4" style="font-family: 'Della Respira', serif;">**Tempat parkir terletak di Tjendana Bistro dan rumah sebelahnya</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 6 -->
+    <section id="page6" class="h-screen w-full flex items-center justify-center bg-[#e18891]">
+        <div class="relative flex flex-col h-full w-full items-center text-center text-[#f1f1f1]"  style="font-family: 'Ovo', serif;">
+            <p class="mt-[92px] lg:text-[28px]">13 APRIL 2025</p>
+            <p class="text-[28px] lg:text-[52px]">COUNTDOWN</p>
+            
+            <div class="spinner-container lg:mt-[120px] mt-[40px]">
+                <img src="./assets/spinning-dots.svg" alt="Loading..." class="spinner w-[60px] h-[60px]" />
+            </div>
+
+            <div class="flex gap-2 lg:gap-6 w-full p-4 lg:p-12 flex-1 justify-center lg:mt-[120px] mt-[40px]">
+                <div class="self-start flex lg:min-h-[200px] flex-1 flex-col border-[1px] rounded-xl border-[#f1f1f1] p-5 items-center">
+                    <p id="day-count" class="text-[52px]">0</p>
+                    <div class="h-[1px] w-[10px] bg-[#f1f1f1]"></div>
+                    <p class="mt-4">DAYS</p>
+                </div>
+                <div class="self-start flex lg:min-h-[200px] flex-1 flex-col border-[1px] rounded-xl border-[#f1f1f1] p-5 items-center">
+                    <p id="hour-count" class="text-[52px]">0</p>
+                    <div class="h-[1px] w-[10px] bg-[#f1f1f1]"></div>
+                    <p class="mt-4">HOURS</p>
+                </div>
+                <div class="self-start flex lg:min-h-[200px] flex-1 flex-col border-[1px] rounded-xl border-[#f1f1f1] p-5 items-center">
+                    <p id="minute-count" class="text-[52px]">0</p>
+                    <div class="h-[1px] w-[10px] bg-[#f1f1f1]"></div>
+                    <p class="mt-4">MINUTES</p>
+                </div>
+            </div>
+
+            <p class="text-sm lg:text-[28px] mb-[92px]">ARBI & LASAK</p>
+        </div>
+    </section>
+
+    <!-- Page 7 -->
+    <section id="page7" class="flex flex-col h-screen w-full flex items-center bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/onboarding-bg.png'); background-position: center 32px;">
+        <div class="w-full flex flex-col p-6">
+            <img src="https://images.unsplash.com/photo-1616020594277-bb158f763f8f?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-[40vh] w-full object-cover"/>
+            <img src="https://images.unsplash.com/photo-1616020594277-bb158f763f8f?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-[40vh] w-full object-cover"/>
+        </div>
+        <div class="w-full px-6 flex flex-col items-center text-[#0f5f53]">
+            <p class="text-xl lg:text-[32px] ml-4" style="font-family: 'TAN Mon Cheri', serif;">A & L</p>
+            <div class="h-[1px] bg-[#0f5f53] w-full"></div>
+            <div class="self-start flex w-full mt-2" style="font-family: 'Flatory sans', serif;">
+                <p class="flex-1 text-xs">TJENDANA BISTRO</p>
+                <p class="flex-1 text-right text-xs">13/4/2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 8 -->
+    <section id="page8" class="relative flex flex-col h-screen w-full flex items-center bg-gradient-to-b from-[#fffce5] to-[#bcfddd]" style="font-family: 'Georgia pro', serif;">
+        <img src="./assets/rundown-bg.svg" class="w-full absolute bottom-0 left-0 right-0"/>
+        <p class="mt-8 text-3xl md:text-5xl"><span class="font-bold text-5xl md:text-[72px]" style="font-family: 'ITC edwerian', serif;">W</span>edding</p>
+        <p class="text-3xl md:text-5xl">Rundown</p>
+        <div class="flex gap-4 mt-8 w-full px-6">
+            <div class="flex mt-1 md:mt-2 md:text-xl justify-end pr-4">
+                <p class="text-right">08-09</p>
+            </div>
+            <div class="flex flex-col gap-4 text-xs md:text-base flex-1 italic">
+                <div class="border-[1px] border-[#d2cdcb] rounded-full p-2">
+                    Akad nikah
+                </div>
+                <div class="flex flex-col text-xs md:text-xl">
+                    <div class="border-[1px] border-[#d2cdcb] rounded-full p-2">
+                        Sesi foto
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex gap-4 mt-4 w-full flex-1 px-6">
+            <div class="flex mt-1 md:mt-2 md:text-xl justify-end pr-4">
+                <p class="text-right">09-11</p>
+            </div>
+            <div class="flex flex-col gap-4 text-xs md:text-xl flex-1 italic">
+                <div class="border-[1px] border-[#d2cdcb] rounded-full p-2">
+                    Pembukaan MC
+                </div>
+                <div class="border-[1px] border-[#d2cdcb] rounded-full p-2">
+                    Sambutan dari Pengantin
+                </div>
+                <div class="border-[1px] border-[#d2cdcb] rounded-full p-2">
+                    Perkenalan singkat 2 keluarga
+                </div>
+                <div class="border-[1px] border-[#d2cdcb] rounded-full p-2">
+                    Lunch (pengantin mingle)
+                </div>
+                <div class="border-[1px] border-[#d2cdcb] rounded-full p-2">
+                    Sesi foto
+                </div>
+                <div class="border-[1px] border-[#d2cdcb] rounded-full p-2">
+                    Penutup
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-[1px] border-black w-full"></div>
+        <p class="text-xs p-2">13 APRIL 2025</p>
+    </section>
+
+    <!--  Page 9 -->
+    <section id="page9" class="relative h-screen w-full flex items-center justify-center bg-gradient-to-b from-[#fffce5] to-[#bcfddd] p-6" style="font-family: 'Georgia pro', serif;">
+       <img src="./assets/closing-icon.svg" />
+    </section>
+  </div>
+
+  <script>
+    // Target Date
+    const targetDate = new Date("2025-04-13T00:00:00").getTime(); // Set your target date here
+
+    // Countdown Function
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const timeDifference = targetDate - now;
+
+      if (timeDifference < 0) {
+        document.getElementById("day-count").textContent = 0;
+        document.getElementById("hour-count").textContent = 0;
+        document.getElementById("minute-count").textContent = 0;
+        clearInterval(countdownInterval); // Stop the timer
+        return;
+      }
+
+      // Calculate remaining time
+      const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+
+      // Update the DOM
+      document.getElementById("day-count").textContent = days;
+      document.getElementById("hour-count").textContent = hours;
+      document.getElementById("minute-count").textContent = minutes;
+    }
+
+    // Start Countdown
+    const countdownInterval = setInterval(updateCountdown, 1000); // Update every second
+    updateCountdown(); // Run immediately on load
+  </script>
+</body>
+</html>
