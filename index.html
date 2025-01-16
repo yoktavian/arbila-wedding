@@ -59,55 +59,87 @@
         width: 50px;
         height: 50px;
         animation: spin 1s linear infinite;
-        }
+    }
 
-        @keyframes spin {
+    @keyframes spin {
         0% {
             transform: rotate(0deg);
         }
         100% {
             transform: rotate(360deg);
         }
-        }
+    }
+
+    .fade-in {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+    .fade-in.visible {
+        opacity: 1;
+    }
+
+    img.fade-in-image {
+        opacity: 0;
+        transform: translateY(-30px); /* Start off 30px above the normal position */
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        transition-delay: 1s;
+    }
+    /* Final state: image is in its normal position */
+    img.fade-in-image.visible {
+        opacity: 1;
+        transform: translateY(0); /* Move to its normal position */
+    }
+
+    .text-fade-in {
+        opacity: 0;
+        transform: translateY(30px); /* Start off 30px below the normal position */
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        transition-delay: 1s;
+    }
+
+    .text-fade-in.visible {
+        opacity: 1;
+        transform: translateY(0); /* Move to its normal position */
+    }
   </style>
 </head>
 <body class="flex items-center justify-center w-screen overflow-x-hidden scroll-smooth" style="font-family: 'Atkinson Hyperlegible', sans-serif;">
   <div class="flex flex-col items-center justify-center max-w-[768px]">
     <!-- Page 1 -->
-    <section id="page1" class="flex flex-col h-screen w-full flex items-center justify-center bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/onboarding-bg.png');">
+    <section id="page1" class="flex flex-col h-screen w-full flex items-center justify-center bg-cover bg-center bg-no-repeat fade-in" style="background-image: url('./assets/onboarding-bg.png');">
         <img src="./assets/couple-logo.png" class="w-full"/>
-        <div class="text-center text-[#397362] bg-opacity-50 p-8 rounded">
-        <p class="text-base lg:text-[28px]">UNDANGAN AKAD & TASYAKURAN PERNIKAHAN</p>
-        <p class="text-[32px] lg:text-[93px]" style="font-family: 'Della Respira', serif;">Arbianti & Lasak</p>
-        <p class="text-base lg:text-[28px] mb-4">MINGGU, 13 april 2025</p>
+        <div class="text-center text-[#397362] bg-opacity-50 p-8 rounded text-fade-in">
+            <p class="text-base lg:text-[28px]">UNDANGAN AKAD & TASYAKURAN PERNIKAHAN</p>
+            <p class="text-[32px] lg:text-[93px]" style="font-family: 'Della Respira', serif;">Arbianti & Lasak</p>
+            <p class="text-base lg:text-[28px] mb-4">MINGGU, 13 april 2025</p>
         </div>
     </section>
 
     <!-- Page 2 -->
-    <section id="page2" class="h-screen w-full flex items-center bg-[#e18891]">
-        <div class="flex flex-col bg-custom bg-center bg-no-repeat bg-responsive w-full h-full text-center items-center justify-center text-[#0f5f53]" style="font-family: 'Della Respira', serif;">
+    <section id="page2" class="h-screen w-full flex items-center bg-[#e18891] fade-in">
+        <div class="flex flex-col bg-custom bg-center bg-no-repeat bg-responsive w-full h-full text-center items-center justify-center text-[#0f5f53] text-fade-in" style="font-family: 'Della Respira', serif;">
             <p>"Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."</p>
             <p class="mt-4">(QS. Ar-Rum: 21)</p>
         </div>
     </section>
 
     <!-- Page 3 -->
-    <section id="page3" class="h-screen w-full flex items-center bg-[#397362] bg-cover bg-center bg-no-repeat pt-[30vh]" style="background-image: url('./assets/couple-info-bg.png');">
+    <section id="page3" class="h-screen w-full flex items-center bg-[#397362] bg-cover bg-center bg-no-repeat pt-[30vh] fade-in" style="background-image: url('./assets/couple-info-bg.png');">
         <div class="flex flex-col h-full w-full bg-[#fdf8da] rounded-t-[220px] md:rounded-t-[360px] text-center p-[32px] items-center">
-            <img src="./assets/invited-icon.svg" class="w-[92px] h-[92px]"/>
-            <p class="mt-8 text-2xl lg:text-[32px]" style="font-family: 'TAN Mon Cheri', serif;">ARBIANTI ASHARI</p>
-            <p class="text-[#3b3838]" style="font-family: 'Ovo', serif;">PUTRI KEDUA DARI AHMAD MULADI & SYLVIA SANTOSA</p>
-            <p class="text-3xl lg:text-[52px] my-6" style="font-family: 'Ovo', serif;">&</p>
-            <p class="text-2xl lg:text-[32px]" style="font-family: 'TAN Mon Cheri', serif;">LASAK SHABA DIRGANTARA</p>
-            <p class="text-[#3b3838]" style="font-family: 'Ovo', serif;">PUTRA PERTAMA DARI DJAROT SUPRAJITNO & UMI KULSUM RODHIYAH</p>
+            <img src="./assets/invited-icon.svg" class="w-[92px] h-[92px] fade-in-image"/>
+            <p class="mt-8 text-2xl lg:text-[32px] text-fade-in" style="font-family: 'TAN Mon Cheri', serif;">ARBIANTI ASHARI</p>
+            <p class="text-[#3b3838] text-fade-in" style="font-family: 'Ovo', serif;">PUTRI KEDUA DARI AHMAD MULADI & SYLVIA SANTOSA</p>
+            <p class="text-3xl lg:text-[52px] my-6 text-fade-in" style="font-family: 'Ovo', serif;">&</p>
+            <p class="text-2xl lg:text-[32px] text-fade-in" style="font-family: 'TAN Mon Cheri', serif;">LASAK SHABA DIRGANTARA</p>
+            <p class="text-[#3b3838] text-fade-in" style="font-family: 'Ovo', serif;">PUTRA PERTAMA DARI DJAROT SUPRAJITNO & UMI KULSUM RODHIYAH</p>
         </div>
     </section>
 
     <!-- Page 4 -->
-    <section id="page3" class="h-screen w-full flex items-center">
+    <section id="page3" class="h-screen w-full flex items-center fade-in">
         <div class="flex h-full w-full text-white">
             <div class="flex flex-1 flex-col">
-                <div class="relative flex-1 w-full flex flex-col py-8 px-4 bg-[#e18891]">
+                <div class="relative flex-1 w-full flex flex-col py-8 px-4 bg-[#e18891] text-fade-in">
                     <p style="font-family: 'Ovo', serif;">THE INTIMATE WEDDING OF</p>
                     <p class="text-4xl lg:text-[93px] sm:text-5xl mt-2" style="font-family: 'Hagrid regular', serif;">ARBIANTI</p>
                     <p class="text-4xl lg:text-[93px] sm:text-5xl mt-2" style="font-family: 'Hagrid regular', serif;">&</p>
@@ -117,7 +149,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="relative flex flex-col flex-1 bg-[#121212]">
+                <div class="relative flex flex-col flex-1 bg-[#121212] text-fade-in">
                     <p class="sm:text-lg lg:text-[32px] ml-4 mt-8" style="font-family: 'TAN Mon Cheri', serif;">MINGGU, 13 APRIL 2025</p>
                     <div class="flex flex-col p-4 mt-4">
                         <div class="flex gap-2 text-base lg:text-[20px]">
@@ -153,14 +185,14 @@
     </section>
 
     <!-- Page 5 -->
-    <section id="page5" class="h-screen w-full flex items-center justify-center bg-white">
+    <section id="page5" class="h-screen w-full flex items-center justify-center bg-white fade-in">
         <div class="relative flex flex-col h-full w-full items-center text-center text-[#397362]">
-            <img src="./assets/top-left-loc-header.svg" class="absolute top-0 left-0 w-[120px] h-[120px]"/>
-            <img src="./assets/top-right-loc-header.svg" class="absolute top-0 right-0 w-[120px] h-[120px"/>
-            <img src="./assets/bottom-left-loc-header.svg" class="absolute bottom-0 left-0 w-[120px] h-[120px"/>
-            <img src="./assets/bottom-right-loc-header.svg" class="absolute bottom-0 right-0 w-[120px] h-[120px"/>
+            <img src="./assets/top-left-loc-header.svg" class="absolute top-0 left-0 w-[120px] h-[120px] fade-in-image"/>
+            <img src="./assets/top-right-loc-header.svg" class="absolute top-0 right-0 w-[120px] h-[120px fade-in-image"/>
+            <img src="./assets/bottom-left-loc-header.svg" class="absolute bottom-0 left-0 w-[120px] h-[120px fade-in-image"/>
+            <img src="./assets/bottom-right-loc-header.svg" class="absolute bottom-0 right-0 w-[120px] h-[120px fade-in-image"/>
 
-            <img src="./assets/qrcode-loc.svg" class="w-[300px] lg:w-[500px] h-[300px] lg:h-[500px] mt-[100px]"/>
+            <img src="./assets/qrcode-loc.svg" class="w-[300px] lg:w-[500px] h-[300px] lg:h-[500px] mt-[100px] fade-in-image"/>
             <div class="flex flex-col p-6">
                 <p class="mt-6 text-3xl lg:text-[52px] font-bold" style="font-family: 'Hagrid regular', serif;">SCAN HERE</p>
                 <p class="mt-6 lg:text-[24px]" style="font-family: 'Della Respira', serif;">TJENDANA BISTRO</p>
@@ -171,13 +203,13 @@
     </section>
 
     <!-- Page 6 -->
-    <section id="page6" class="h-screen w-full flex items-center justify-center bg-[#e18891]">
+    <section id="page6" class="h-screen w-full flex items-center justify-center bg-[#e18891] fade-in">
         <div class="relative flex flex-col h-full w-full items-center text-center text-[#f1f1f1]"  style="font-family: 'Ovo', serif;">
             <p class="mt-[92px] lg:text-[28px]">13 APRIL 2025</p>
             <p class="text-[28px] lg:text-[52px]">COUNTDOWN</p>
             
             <div class="spinner-container lg:mt-[120px] mt-[40px]">
-                <img src="./assets/spinning-dots.svg" alt="Loading..." class="spinner w-[60px] h-[60px]" />
+                <img src="./assets/spinning-dots.svg" alt="Loading..." class="spinner w-[60px] h-[60px] fade-in-image" />
             </div>
 
             <div class="flex gap-2 lg:gap-6 w-full p-4 lg:p-12 flex-1 justify-center lg:mt-[120px] mt-[40px]">
@@ -203,10 +235,10 @@
     </section>
 
     <!-- Page 7 -->
-    <section id="page7" class="flex flex-col h-screen w-full flex items-center bg-cover bg-center bg-no-repeat" style="background-image: url('./assets/onboarding-bg.png'); background-position: center 32px;">
+    <section id="page7" class="flex flex-col h-screen w-full flex items-center bg-cover bg-center bg-no-repeat fade-in" style="background-image: url('./assets/onboarding-bg.png'); background-position: center 32px;">
         <div class="w-full flex flex-col p-6">
-            <img src="https://images.unsplash.com/photo-1616020594277-bb158f763f8f?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-[40vh] w-full object-cover"/>
-            <img src="https://images.unsplash.com/photo-1616020594277-bb158f763f8f?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-[40vh] w-full object-cover"/>
+            <img src="https://images.unsplash.com/photo-1616020594277-bb158f763f8f?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-[40vh] w-full object-cover fade-in-image"/>
+            <img src="https://images.unsplash.com/photo-1616020594277-bb158f763f8f?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="h-[40vh] w-full object-cover fade-in-image"/>
         </div>
         <div class="w-full px-6 flex flex-col items-center text-[#0f5f53]">
             <p class="text-xl lg:text-[32px] ml-4" style="font-family: 'TAN Mon Cheri', serif;">A & L</p>
@@ -219,8 +251,8 @@
     </section>
 
     <!-- Page 8 -->
-    <section id="page8" class="relative flex flex-col h-screen w-full flex items-center bg-gradient-to-b from-[#fffce5] to-[#bcfddd]" style="font-family: 'Georgia pro', serif;">
-        <img src="./assets/rundown-bg.svg" class="w-full absolute bottom-0 left-0 right-0"/>
+    <section id="page8" class="relative flex flex-col h-screen w-full flex items-center bg-gradient-to-b from-[#fffce5] to-[#bcfddd] fade-in" style="font-family: 'Georgia pro', serif;">
+        <img src="./assets/rundown-bg.svg" class="w-full absolute bottom-0 left-0 right-0 fade-in-image"/>
         <p class="mt-8 text-3xl md:text-5xl"><span class="font-bold text-5xl md:text-[72px]" style="font-family: 'ITC edwerian', serif;">W</span>edding</p>
         <p class="text-3xl md:text-5xl">Rundown</p>
         <div class="flex gap-4 mt-8 w-full px-6">
@@ -269,8 +301,8 @@
     </section>
 
     <!--  Page 9 -->
-    <section id="page9" class="relative h-screen w-full flex items-center justify-center bg-gradient-to-b from-[#fffce5] to-[#bcfddd] p-6" style="font-family: 'Georgia pro', serif;">
-       <img src="./assets/closing-icon.svg" />
+    <section id="page9" class="relative h-screen w-full flex items-center justify-center p-6 fade-in" style="font-family: 'Georgia pro', serif;">
+       <img src="./assets/closing-icon.svg" class="fade-in-image" />
     </section>
   </div>
 
@@ -305,6 +337,48 @@
     // Start Countdown
     const countdownInterval = setInterval(updateCountdown, 1000); // Update every second
     updateCountdown(); // Run immediately on load
+
+    // Select all sections
+    const sections = document.querySelectorAll('.fade-in');
+    const images = document.querySelectorAll('.fade-in-image');
+    const textElements = document.querySelectorAll('.text-fade-in');
+
+    // Function to detect if the section is at least 50% visible in the viewport
+    function isSection50PercentVisible(section) {
+        const rect = section.getBoundingClientRect();
+        const sectionHeight = rect.height;
+        
+        // Calculate the percentage of the section visible in the viewport
+        const visibleHeight = Math.min(window.innerHeight, rect.bottom) - Math.max(0, rect.top);
+        
+        // Trigger when 50% or more of the section is visible
+        return visibleHeight >= sectionHeight / 2;
+    }
+
+    // Function to trigger animations based on the current page
+    function triggerAnimations() {
+        sections.forEach((section) => {
+            if (isSection50PercentVisible(section) && !section.classList.contains('visible')) {
+                section.classList.add('visible'); // Trigger animation on the section when 50% is visible
+            }
+        });
+        images.forEach((img) => {
+            if (isSection50PercentVisible(img.parentElement) && !img.classList.contains('visible')) {
+                img.classList.add('visible'); // Trigger image animation when 50% of its section is visible
+            }
+        });
+        textElements.forEach((text) => {
+            if (isSection50PercentVisible(text.parentElement) && !text.classList.contains('visible')) {
+                text.classList.add('visible'); // Trigger text animation when 50% of its section is visible
+            }
+        });
+    }
+
+    // Attach scroll event listener
+    window.addEventListener('scroll', triggerAnimations);
+
+    // Initial check to add animations to the first section on load
+    triggerAnimations();
   </script>
 </body>
 </html>
